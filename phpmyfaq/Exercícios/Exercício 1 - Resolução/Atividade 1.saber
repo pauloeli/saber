@@ -1,0 +1,100 @@
+﻿<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="F/5CQK@YCive5qG!dg#9" x="38" y="38">
+    <field name="VAR">numeroA</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="4AFrnSvILIP3LtYAeOc8">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <shadow type="text" id="T)|ETK`/r;3l/pLVbNrT">
+            <field name="TEXT">Digite o valor do primeiro número:</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="Ioc0~mYT6Cf?B_Zh~!Uh">
+        <field name="VAR">numeroB</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id=":Dmcoeh3`Ie;I9Gb@=mW">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <shadow type="text" id="4LkD=_sVdU^c)uorysv5">
+                <field name="TEXT">Digite o valor do segundo número:</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="Y)KwoP8^8;Y,%daBTPQk">
+            <mutation elseif="1" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="|Tq0V]O79Oeg-SrF,ds4">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="variables_get" id="U53xncDk1,Md4St%kh`n">
+                    <field name="VAR">numeroA</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="variables_get" id="*%eHSu+ZKXq]aRWQUXxL">
+                    <field name="VAR">numeroB</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="text_print" id="h+*rBc@zT1P+5{no*N!2">
+                <value name="TEXT">
+                  <shadow type="text" id="egW/9|@C0[+2X;uFyp8s">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="variables_get" id="Q+!uq?Cd8?7)c/|-NWvJ">
+                    <field name="VAR">numeroA</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_compare" id="PB^VbB}.n(H~_N9(q[a=">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="variables_get" id="Odv*;.(PH|:.)o},:ux,">
+                    <field name="VAR">numeroB</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="variables_get" id="`pd3Gn)H%?=|^`8eFq*g">
+                    <field name="VAR">numeroA</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="text_print" id="zfUInPuZ|MqXO!ZD=Jz_">
+                <value name="TEXT">
+                  <shadow type="text" id="BjhPCb,3_Yxg[NO`a4#V">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="variables_get" id="2~YPrW+t!_Tcioqq0BNu">
+                    <field name="VAR">numeroB</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="text_print" id="di-~q5n1,hA=[U]]jD0M">
+                <value name="TEXT">
+                  <shadow type="text" id="8UJ:+zFz0t6j~{8m|bVT">
+                    <field name="TEXT">Os números são iguais.</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

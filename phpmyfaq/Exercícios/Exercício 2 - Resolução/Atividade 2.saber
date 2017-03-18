@@ -1,0 +1,250 @@
+﻿<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="6y}45U|`Qg6~xa)Pgrgq" x="-1387" y="38">
+    <field name="VAR">letra</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="@Q)IncZS=G?I53wS4{ea">
+        <mutation type="TEXT"></mutation>
+        <field name="TYPE">TEXT</field>
+        <value name="TEXT">
+          <shadow type="text" id="aj-ZWH!YvgsKuZlaOG@o">
+            <field name="TEXT">Digite uma letra:</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="!fonK.8r69i@3xwm#;gx">
+        <mutation elseif="4" else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_operation" id="in~4qN#iG[6E3y6Pg_O6">
+            <field name="OP">OR</field>
+            <value name="A">
+              <block type="logic_compare" id="0(o~vsTs4MqOKsxp:eQK">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="S50v2:/(VkRF3A5-):[5">
+                    <field name="VAR">letra</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="?3WtQ7KOX#PYKD,VK?wf">
+                    <field name="TEXT">a</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id="fGxlQe-:.MTWrvS-ih8.">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="q^B]oD,}tN#sj~?KXwig">
+                    <field name="VAR">letra</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="dZv(Zs9d7r)A#8Wn6vL8">
+                    <field name="TEXT">A</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="CZ*]4HZ;4glq^eSxuhSR">
+            <value name="TEXT">
+              <shadow type="text" id="u%dSN_^WG5_8gDo1/FMB">
+                <field name="TEXT">É uma vogal.</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_operation" id="B%Wx7l.y+AvEwC,7fmX]">
+            <field name="OP">OR</field>
+            <value name="A">
+              <block type="logic_compare" id="We]sy{`H~Y`X@]f2o`|Q">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="Rj_q7Xb1~!A[,)@6CX^O">
+                    <field name="VAR">letra</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="BQw|nT~X}]:^dx5^+TKi">
+                    <field name="TEXT">e</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id="(CmXh45(GB;xeKW+~S2;">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="AFj_h!rBAMv34ik_zt4x">
+                    <field name="VAR">letra</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="y{5l!Y,QZUY5)7I-fG/?">
+                    <field name="TEXT">E</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="text_print" id="3#bE):?B6V/!zbpC*yVz">
+            <value name="TEXT">
+              <shadow type="text" id="Z,f.}wF3?OtrY[1EE`8w">
+                <field name="TEXT">É uma vogal.</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+        <value name="IF2">
+          <block type="logic_operation" id="@{Z[nuo`yQFk2:q!sXF;">
+            <field name="OP">OR</field>
+            <value name="A">
+              <block type="logic_compare" id="7xA:vJ7E#_TWvg?M]5ZK">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="_mGcQNP#L`h[uOiPPq86">
+                    <field name="VAR">letra</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="CM[6MV%[?gq8n9pCA%!@">
+                    <field name="TEXT">i</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id="O=WyobZ5=cwkb1AhOO*b">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="zcrptAai~gnq^Tz6/I0j">
+                    <field name="VAR">letra</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="T%BdgD(Y|QexR4,][vZL">
+                    <field name="TEXT">I</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="text_print" id="Ls0K{eN9D@=www?QaQ)#">
+            <value name="TEXT">
+              <shadow type="text" id="TKYM|AU#r/UUYj?gQCa,">
+                <field name="TEXT">É uma vogal.</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+        <value name="IF3">
+          <block type="logic_operation" id="mJ9_Q?eSAu%MP9RnoX(Z">
+            <field name="OP">OR</field>
+            <value name="A">
+              <block type="logic_compare" id="iyYPBl|Okzbgn^kziUe3">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="7t.TbUMV5-32~UCYZ#ZU">
+                    <field name="VAR">letra</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="}k||A-U%Z#_Mr--?k~[K">
+                    <field name="TEXT">o</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id="K/d?By7d!r2rreG284vv">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="u{5/LE0wCne~9HsN8}bP">
+                    <field name="VAR">letra</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="y+JQg6wqde[Qj~g?rGCI">
+                    <field name="TEXT">O</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO3">
+          <block type="text_print" id="(9Fthmw/-Q9Z[7`|@|]}">
+            <value name="TEXT">
+              <shadow type="text" id="=l9nyKO_YfK}G6hCXUG`">
+                <field name="TEXT">É uma vogal.</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+        <value name="IF4">
+          <block type="logic_operation" id="1B3{M)K3[EYN/hs-~;Kx">
+            <field name="OP">OR</field>
+            <value name="A">
+              <block type="logic_compare" id="_Oq;]gI2l`zqpn)GgdLh">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="s(Y1o}o@5Pv71}~rnVW@">
+                    <field name="VAR">letra</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="Q5o*;ITq!xi7Knb,rNS)">
+                    <field name="TEXT">u</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id="-wYG!O*IU/;U9kxqBKG^">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="3[Sp~:Rl/H5X8w_Wn5[^">
+                    <field name="VAR">letra</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="Rn!~dEhnBWz~pWTH)}v3">
+                    <field name="TEXT">U</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO4">
+          <block type="text_print" id="sAU#5d1NsVwCKE}WMAbd">
+            <value name="TEXT">
+              <shadow type="text" id="YejK?nLIXM%m+^HH74+q">
+                <field name="TEXT">É uma vogal.</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="text_print" id="fZ_.bPho|AWSZecc|4N4">
+            <value name="TEXT">
+              <shadow type="text" id="K!@jtqu`T;Bl}n0SbFsN">
+                <field name="TEXT">É uma consoante.</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

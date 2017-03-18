@@ -1,0 +1,234 @@
+﻿<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="|LJHW5{D_9_KMnT:%iXu" x="63" y="13">
+    <field name="VAR">numeroA</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="R[dS*[0i^*N^UA8Sw!Zz">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <shadow type="text" id="TY^dQ#8-`4:oVo2*US?P">
+            <field name="TEXT">Digite o primeiro número:</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id=",OZ{NgT;pLD5qRuY~]{d">
+        <field name="VAR">numeroB</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="GAUA|Y+T(dwT]NC)U#|Q">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <shadow type="text" id=";W?a]!be=(_Mf_6fK9iK">
+                <field name="TEXT">Digite o segundo número:</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="Mikj@FvN{7sf][}jn]Q-">
+            <field name="VAR">operacao</field>
+            <value name="VALUE">
+              <block type="text_prompt_ext" id="W8R)*2FaW}wBd(%7bpA;">
+                <mutation type="TEXT"></mutation>
+                <field name="TYPE">TEXT</field>
+                <value name="TEXT">
+                  <shadow type="text" id="+Oy:;^Wz@shoPrPZav5w">
+                    <field name="TEXT">Digite a operação ('+','-','/','*'):</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="Ny:y`LN-^c:XN|yZmc%M">
+                <mutation elseif="3" else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="4k=l|fmjmoOv!qW!.6K0">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id=".ZW24H^R2z[VS#7T~dje">
+                        <field name="VAR">operacao</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="jew]Ong;j8z*%PAAa~6O">
+                        <field name="TEXT">+</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="text_print" id="8WK?+*VqRd7dK*82I?;k">
+                    <value name="TEXT">
+                      <shadow type="text" id="[n)yRGNVD/[OHO+]FXy~">
+                        <field name="TEXT">abc</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="e51N`Wj#6av%)3Vl]alT">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <shadow type="math_number" id="`+qxi*?HP/)@tJLk.^/#">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="D|iN}toxzmXD|@p~hK=8">
+                            <field name="VAR">numeroA</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="QHPii{Wq;8F%VWBMMr?`">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="Qb[e}s-=7GKJBMrycKUF">
+                            <field name="VAR">numeroB</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF1">
+                  <block type="logic_compare" id="VxW%%rsj1~]#3}TCH?yE">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="e,EmB)NWLs)yqpyhxd.w">
+                        <field name="VAR">operacao</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="){+.g)5.@P9KlHXpTb@o">
+                        <field name="TEXT">-</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="text_print" id="4ZG[NP~|_v5[%yn+iHLF">
+                    <value name="TEXT">
+                      <shadow type="text" id="[n)yRGNVD/[OHO+]FXy~">
+                        <field name="TEXT">abc</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="%wDrLW|mY+DGccgC}b:A">
+                        <field name="OP">MINUS</field>
+                        <value name="A">
+                          <shadow type="math_number" id="`+qxi*?HP/)@tJLk.^/#">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="8Qrqd?Y3oc8TSBp^~[SQ">
+                            <field name="VAR">numeroA</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="QHPii{Wq;8F%VWBMMr?`">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="xJ-4xYFO:wK+Tt;_M8jA">
+                            <field name="VAR">numeroB</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF2">
+                  <block type="logic_compare" id="VoYQ.c[Sx7%ZL}R[)yar">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="pG,uQ]q?54`IU:@yx*tt">
+                        <field name="VAR">operacao</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="+S)a+`?:G;~?B7B!IPK;">
+                        <field name="TEXT">/</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO2">
+                  <block type="text_print" id="{6BDS*;w.{-FUUAqAEHB">
+                    <value name="TEXT">
+                      <shadow type="text" id="[n)yRGNVD/[OHO+]FXy~">
+                        <field name="TEXT">abc</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="q]F{D1J+pRof~FXl;%Kd">
+                        <field name="OP">DIVIDE</field>
+                        <value name="A">
+                          <shadow type="math_number" id="`+qxi*?HP/)@tJLk.^/#">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="QYlDtncj{bCW}[Uc.:TF">
+                            <field name="VAR">numeroA</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="QHPii{Wq;8F%VWBMMr?`">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id=":DF2X^!=vWz0qwv^(4dx">
+                            <field name="VAR">numeroB</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF3">
+                  <block type="logic_compare" id="pzOjftbj8u#=.MV;ju%J">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="ED-@F[7y2=YDXizAN1]D">
+                        <field name="VAR">operacao</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id=";(|}MQsDy2o+5W}JRq=:">
+                        <field name="TEXT">*</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO3">
+                  <block type="text_print" id="(tC_%i-wT]uL+ZJ8.R6f">
+                    <value name="TEXT">
+                      <shadow type="text" id="[n)yRGNVD/[OHO+]FXy~">
+                        <field name="TEXT">abc</field>
+                      </shadow>
+                      <block type="math_arithmetic" id=",[Wn?Rx=J*^[WIQ^KTlK">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <shadow type="math_number" id="`+qxi*?HP/)@tJLk.^/#">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="a-av1XeA=`Ird5^T{H8V">
+                            <field name="VAR">numeroA</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="QHPii{Wq;8F%VWBMMr?`">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="P;3mZ+X-y||5}ng=/M2Y">
+                            <field name="VAR">numeroB</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="text_print" id="W-Ft;aU?,j8aF%L}AY7+">
+                    <value name="TEXT">
+                      <shadow type="text" id="{@o8{3VDHDp]!;#{Hk;;">
+                        <field name="TEXT">Operação não suportada.</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

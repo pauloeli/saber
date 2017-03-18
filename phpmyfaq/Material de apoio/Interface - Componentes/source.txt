@@ -1,0 +1,22 @@
+<p style="text-align: justify;">Os componentes do Blockly estão organizados e agrupados em um menu à esquerda da tela. No menu é possível averiguar ainda que os componentes estão agrupados de acordo com a sua categoria, sendo elas:</p>
+<ol style="text-align: justify;">
+<li>       Lógica</li>
+<li>       Laços</li>
+<li>       Matemática</li>
+<li>       Texto</li>
+<li>       Listas</li>
+<li>       Cor</li>
+<li>       Variáveis</li>
+<li>       Funções</li>
+</ol>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="http://saber.ppgtic.ufsc.br/faq/images/componentes.PNG" width="127" height="252" /></p>
+<p style="text-align: justify;">É importante ressaltar que esta disposição se encontra em particular no <em><strong>Ambiente Livre</strong></em>, sendo que a interface para a resolução dos exercícios é mais simplificada, com intenção de evitar confusões e facilitar o estudante na escolha dos componentes.</p>
+<p>Como é de se presumir, cada uma das categorias de componente possui suas particularidades e seus componentes, sendo que dentre estas particularidades, pode-se destacar: </p>
+<p style="text-align: justify;"><strong>Lógica:</strong> componentes relacionados a parte de tomada de decisões, aplicação de regras, e execução de comandos mediante aferições de variáveis, valores, entradas e lógica.</p>
+<p style="text-align: justify;"><strong>Laços:</strong> componentes relacionados a laços de repetição, procedimentos que buscam repetir uma mesma instrução quantas vezes for desejado, mediante a regras.</p>
+<p style="text-align: justify;"><strong>Matemática:</strong> componentes relacionados a operações matemáticas, como soma, subtração, resto de divisões e afins.</p>
+<p style="text-align: justify;"><strong>Texto:</strong> componentes relacionados a interação de mensagens com o usuário e construção de mensagens de saída. Importante destacar que todo e qualquer conteúdo – salvo algumas exceções – que estiverem relacionados a valores alfanuméricos, encontrará aqui o seu componente.</p>
+<p style="text-align: justify;"><strong>Listas:</strong> componentes relacionados a lista de valores. <em>Este conteúdo faz parte de um módulo mais avançado do Blockly, sendo que não é foco dos exercícios a primeiro momento estar trabalhando com eles.</em></p>
+<p style="text-align: justify;"><strong>Cor:</strong> componentes relacionados a criação de cores dentro do programa. Com ele é possível personalizar algumas partes do programa/algoritmo para possuir cores diferenciadas. Através da manipulação de códigos RGB e afins, os componentes permitem montar cores diferentes. <em>Este conteúdo faz parte de um módulo mais avançado do Blockly, sendo que não é foco dos exercícios a primeiro momento estar trabalhando com eles.</em></p>
+<p style="text-align: justify;"><strong>Variáveis:</strong> componentes relacionados a variáveis, como declaração e uso de alguma variável já configurada dentro do aplicativo. Para cada nova variável utilizada dentro do projeto, será adicionado a sua peça de utilização, assim, é importante observar que esta guia funciona como um agrupado – também – de variáveis utilizadas.</p>
+<p style="text-align: justify;"><strong>Funções:</strong> componentes relacionados ao desenvolvimento de micro rotinas dentro da interface que retorne valores para o programa principal. É particularmente utilizado quando um mesmo procedimento será executado mais de uma vez, e não se deseja repetir os blocos. <em>Este conteúdo faz parte de um módulo mais avançado do Blockly, sendo que não é foco dos exercícios a primeiro momento estar trabalhando com eles.</em></p>

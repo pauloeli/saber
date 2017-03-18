@@ -1,0 +1,2 @@
+pSegue o código para download da resolução do exercício.p
+pimg style=display block; margin-left auto; margin-right auto; src=httpsaber.ppgtic.ufsc.brfaqimagesexercicio_6_resolvido.png width=699 height=569 p

@@ -1,0 +1,72 @@
+<p style="text-align: justify;">Nesta seção, encontram-se os componentes responsáveis por realizar as operações lógicas dentro do nosso programa/algoritmo.</p>
+<p style="text-align: justify;">Antes de iniciar a descrição sobre cada um dos componentes em particular, é interessante observar que operações lógicas podem ser consideradas como nada mais que sendo <em><strong>“processos de tomada de decisões”</strong></em>. No ambiente corporativo e entre os desenvolvedores, este comando é chamado de "if" - palavra que inglês, significa <em><strong>se</strong>.</em></p>
+<p style="text-align: justify;">Assim, esta guia de componente nos provêm uma série de componentes que nos permite estar realizando validações de condições, valores de variáveis e a partir destas verificações, executar ações.</p>
+<p style="text-align: justify;">Neste primeiro tópico, serão abordados os seguintes componentes da referida seção:</p>
+<table border="1">
+<tbody>
+<tr>
+<td><img style="display: block; margin-left: auto; margin-right: auto;" src="http://saber.ppgtic.ufsc.br/faq/images/logica_se.png" width="78" height="63" /></td>
+<td style="text-align: justify;">
+<h6>Este componente realizada a validação de uma regra, sendo que caso ela seja obedecida o processo dentro do "faça" será executado.</h6>
+</td>
+</tr>
+<tr>
+<td style="text-align: justify;"><img style="display: block; margin-left: auto; margin-right: auto;" src="http://saber.ppgtic.ufsc.br/faq/images/logica_condicao.png" width="111" height="36" /></td>
+<td style="text-align: justify;">
+<h6>Este comando irá realizar a validação se os dois valores informados obedecem a condição imposto pelo símbolo que está ao centro do componente (neste exemplo o "="). Este operador pode ser alterado, bastando para tal, clicar na opção e selecionar. As opções existentes são em ordem: igual, diferente, menor, menor igual, maior igual e maior.</h6>
+</td>
+</tr>
+<tr>
+<td><img src="http://saber.ppgtic.ufsc.br/faq/images/logica_verdadeiro.png" width="110" height="36" /></td>
+<td style="text-align: justify;">
+<h6>Este componente possui funcionamento muito semelhante ao componente acima mencionado, porém este irá validar se as duas entradas fornecidas possuem valores verdadeiros. É importante observar que pode-se personalizar para que a resposta seja válida para um dos lados aponte verdadeiro ou para que os dois lados obrigatoriamente se façam verdadeiros. Para a primeira situação deve-se usar o operador "ou", enquanto que para o segundo, o operador "e". Este operador pode ser personalizado selecionando o centro do componente, onde é indicado uma pequena flecha.</h6>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Estes três componentes provavelmente serão os mais utilizados no decorrer dos seus exercícios, e constituem-se como parte vital para o desenvolvimento de algoritmos. <br /><br />Para facilitar a nossa compreensão sobre estes componentes, vamos imaginar que queremos desenvolver um algoritmo que valide se o aluno possui mais de 18 anos. Abaixo temos a imagem de como o código seria montado.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="http://saber.ppgtic.ufsc.br/faq/images/18-anos.png" width="649" height="157" /></p>
+<p style="text-align: justify;">Podemos observar que após solicitar ao usuário a idade, é realizada a verificação através do comando <em><strong>Se</strong></em>. Este comando irá validar o bloco que esta encaixado, onde o valor da variável "idade" é comparado se possui valor "maior ou igual" a 18. Caso essa condição seja verdadeira, então é executado o comando especificado dentro do <em><strong>faça</strong></em>. Caso a condição não seja verdadeira, é exibida a mensagem informando que a idade é inferior.<br /><br />Observe que o comando <em><strong>se</strong> </em>fora personalizado, adicionando a opção do <em><strong>senão</strong></em>. <em><strong>Senão</strong></em> é a negação as condições anteriores, onde é possível especificar que caso as opções exibidas acima não sejam obedecidas, seja executado os processos ali inseridos.<br /><br />Para que seja alterado o funcionamento padrão do componente <em><strong>se</strong></em> adicionando a condição de negação <em><strong>senão</strong></em>, devemos clicar no ícone de personalização e então arrastar as partes que desejamos. Neste aspecto, destaca-se a diferença entre eles, que se constitui:</p>
+<ul style="text-align: justify;">
+<li style="text-align: justify;"><em><strong>Se:</strong></em> validará a condição básica, verificando se ela obedece ao desejado.</li>
+<li style="text-align: justify;"><em><strong>Senão se:</strong></em> será executado somente se a primeira validação (condição "se") não tiver sido obedecida, sendo que nos permite ainda adicionar uma validação.</li>
+<li style="text-align: justify;"><em><strong>Senão:</strong></em> será executado caso as condições impostas nos comandos <em><strong>se</strong></em> e <em><strong>senão</strong></em> não tenham sido obedecidas. Em outras palavras, caso nenhuma das condições impostas seja obedecida, o programa irá executar os processos ali inseridos.</li>
+</ul>
+<p style="text-align: justify;">Por fim, o último componente presente desta primeira parte, se trata do componente que nos permite validar se ambos os retornos são verdadeiros. Seu funcionamento é bastante semelhante ao segundo componente, com a diferença de que este valida o retorno de duas validações, e pode ser personalizado para validar se ambas as entradas são verdadeiras ou apenas uma delas.<br /><br />Buscando deixar o conceito mais concreto, vamos supor que gostaríamos de validar se além de ter mais de 18 anos, o usuário seja do sexo masculino e caso essa primeira condição não seja obedecida, iremos validar se é mulher e possui mais de 18 anos. O programa para realizar tal validação, seria:</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="http://saber.ppgtic.ufsc.br/faq/images/programa_2.png" width="755" height="238" /></p>
+<p style="text-align: justify;">Ao rodar o programa, vamos verificar que dependendo dos valores informados, teremos diferentes respostas, afinal agora além da primeira condição, temos o encadeamento delas. Assim, teremos a seguinte tabela de teste:</p>
+<table style="height: 174px;" border="1" width="758">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Idade</strong></td>
+<td style="text-align: center;"><strong>Sexo</strong></td>
+<td style="text-align: center;"><strong>Resultado</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">M</td>
+<td>Você possui 18 anos ou mais, e é do sexo masculino.</td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">F</td>
+<td>Você possui 18 anos ou mais, e é do sexo feminino.</td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">M</td>
+<td>Você não possui 18 anos ou os valores informados são inválidos para o algoritimo</td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">F</td>
+<td>Você não possui 18 anos ou os valores informados são inválidos para o algoritimo</td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">Y</td>
+<td>Você não possui 18 anos ou os valores informados são inválidos para o algoritimo</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Você pode efetuar o donwload dos arquivos dos programas, carregar na interface livre e realizar a simulação.</p>

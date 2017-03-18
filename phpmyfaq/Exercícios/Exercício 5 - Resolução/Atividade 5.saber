@@ -1,0 +1,250 @@
+﻿<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="VP`G:aPVXI])aOVGXWjP" x="-712" y="-412">
+    <field name="VAR">numA</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="^*oWj]y?137*n(IbUb:j">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <shadow type="text" id="8MKR_V@*6[~!w)^l*,6k">
+            <field name="TEXT"></field>
+          </shadow>
+          <block type="text" id="^}4DM!4MeRZ3dJcxGd!J">
+            <field name="TEXT">Número 1:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="/dq#Vh!CL^f}eU/pFf_f">
+        <field name="VAR">numB</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="g7eOmx@NQW|uDF#I3D?q">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <shadow type="text" id="L@Q{_)_P0O1w@UfJ+xh@">
+                <field name="TEXT">N�mero 2:</field>
+              </shadow>
+              <block type="text" id="iOLwD~-][M?{.)fmKjVR">
+                <field name="TEXT">Número 2:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="l7eE!L2wI5UQN(J:~ss[">
+            <field name="VAR">numC</field>
+            <value name="VALUE">
+              <block type="text_prompt_ext" id=":1,GfD]Cg|g}j`hgABlK">
+                <mutation type="NUMBER"></mutation>
+                <field name="TYPE">NUMBER</field>
+                <value name="TEXT">
+                  <shadow type="text" id="fLY70o(;cP#{P8B3wyse">
+                    <field name="TEXT">N�mero 2:</field>
+                  </shadow>
+                  <block type="text" id="/TOMDX*hPv/rdihEPcDS">
+                    <field name="TEXT">Número 3:</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="yE%A};1.+n{nU[y0n+),">
+                <field name="VAR">numTotal</field>
+                <value name="VALUE">
+                  <block type="math_number" id="XVJCW4QIlc?6)5:wCvlM">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="i~^Nj=.X)uGMCc3%^-:l">
+                    <value name="IF0">
+                      <block type="logic_compare" id="wwDM^8ZNL1:w3j/kt=xC">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="math_modulo" id="r9A@qK/;L@4n3=R])^WW">
+                            <value name="DIVIDEND">
+                              <shadow type="math_number" id="XB+JGk#CtFmD(n^N}(b}">
+                                <field name="NUM">64</field>
+                              </shadow>
+                              <block type="variables_get" id="V%)YUnnhx6[8nTxX~[TK">
+                                <field name="VAR">numA</field>
+                              </block>
+                            </value>
+                            <value name="DIVISOR">
+                              <shadow type="math_number" id="nE!Y@zPmT^y65:CsBNd7">
+                                <field name="NUM">2</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="?2])#YsZAm.KD/quCkCR">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="variables_set" id=".,qpJbQGn4UfGW8dhwXn">
+                        <field name="VAR">numTotal</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="i2.6gWjB=D/^LOi})|Pk">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <shadow type="math_number" id="v^Uu9^bgKqvz#c^po[OH">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="variables_get" id="f:Qnzm,OFHA_t%vC8W[^">
+                                <field name="VAR">numTotal</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="[*BDx;?J.dvMR62(dYIz">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="variables_get" id="5CIHFk)[]7c^V*;,R6p6">
+                                <field name="VAR">numA</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="8WwIXc{/y4/_7jWM1dR?">
+                        <value name="IF0">
+                          <block type="logic_compare" id=":;pH5er~!AYrRe_pY4pl">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="math_modulo" id="ot:7h:?_kY*fNNj+e7-L">
+                                <value name="DIVIDEND">
+                                  <shadow type="math_number" id="XB+JGk#CtFmD(n^N}(b}">
+                                    <field name="NUM">64</field>
+                                  </shadow>
+                                  <block type="variables_get" id="f(n^:R99=d_p+*OZ8;NU">
+                                    <field name="VAR">numB</field>
+                                  </block>
+                                </value>
+                                <value name="DIVISOR">
+                                  <shadow type="math_number" id="SSsTA_o9PpFnd4kl.]LR">
+                                    <field name="NUM">2</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="wKDZDk]`7,klamq3zawB">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="variables_set" id="#Lry_JYjX+yt}wp1|I@e">
+                            <field name="VAR">numTotal</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="^EpVBvoGK,g2!;b[*3mb">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="v^Uu9^bgKqvz#c^po[OH">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="A7E9-n8zYs^Y2PKm_e}^">
+                                    <field name="VAR">numTotal</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="[*BDx;?J.dvMR62(dYIz">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="3~NCYgvw#!s}SfTS*!Z.">
+                                    <field name="VAR">numB</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="yTylU#%ixFgOVob/E#-b">
+                            <value name="IF0">
+                              <block type="logic_compare" id="ZC`PjzI7Vm*2Fs}EBTq^">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="math_modulo" id="`+9U=DI0km(J6}u1iyCo">
+                                    <value name="DIVIDEND">
+                                      <shadow type="math_number" id="XB+JGk#CtFmD(n^N}(b}">
+                                        <field name="NUM">64</field>
+                                      </shadow>
+                                      <block type="variables_get" id="m#bjxshV1gGSN|f^e!8i">
+                                        <field name="VAR">numC</field>
+                                      </block>
+                                    </value>
+                                    <value name="DIVISOR">
+                                      <shadow type="math_number" id="]erI,p^vN[90qK98pTWQ">
+                                        <field name="NUM">2</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="FMAAU71jzMQA#QzEVtiw">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="variables_set" id="C)zan,3}E4Z{r-:}w69(">
+                                <field name="VAR">numTotal</field>
+                                <value name="VALUE">
+                                  <block type="math_arithmetic" id="vEN/4@U)pRB9v/sJ75K#">
+                                    <field name="OP">ADD</field>
+                                    <value name="A">
+                                      <shadow type="math_number" id="v^Uu9^bgKqvz#c^po[OH">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="variables_get" id="X:W%02~b|R.aKv6TcfUo">
+                                        <field name="VAR">numTotal</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id="[*BDx;?J.dvMR62(dYIz">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="variables_get" id="I:fEjLCe.IhGCv2lLr=7">
+                                        <field name="VAR">numC</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="text_print" id="4,ld-3kbtA|)|P#-mYS1">
+                                <value name="TEXT">
+                                  <shadow type="text" id="K9oLG1QU1||/yL~^Elis">
+                                    <field name="TEXT">abc</field>
+                                  </shadow>
+                                  <block type="variables_get" id="[a}/JZ9^n;.8i+tVg)!C">
+                                    <field name="VAR">numTotal</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

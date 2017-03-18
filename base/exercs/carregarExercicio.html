@@ -1,0 +1,58 @@
+<html>
+<meta charset="ISO-8859-1">
+
+<head>
+    <title>Carregar Exercício</title>
+    <style type="text/css">
+        html {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 100%;
+            background: #333;
+        }
+        
+        h1 {
+            margin-top: 0;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<script language="javascript">
+    var fileContent;
+    function setLoadedSolution() {
+        setSolution(fileContent);
+    }
+
+    function loadFile() {
+        fileContent = '';
+
+        try {
+            var file = document.getElementById('fileInput').files[0];
+            var fileExtension = /(?:\.([^.]+))?$/.exec(file.name);
+            if (fileExtension[1].toLowerCase() !== 'saber') {
+                alert('Ops, arquivo inválido.')
+            } else {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    fileContent = reader.result;
+                }
+                reader.readAsText(file, 'UTF-8');
+            }
+        } catch (e) {
+            alert('Ops, ocorreu um erro ao carregar o arquivo.')
+        }
+    }
+
+</script>
+
+<body>
+    <div>
+        Selecione o arquivo gerado pelo Portal Saber.
+        <input type="file" id="fileInput" onchange="loadFile();" style="margin-top: 2px">
+    </div>
+</body>
+
+</html>

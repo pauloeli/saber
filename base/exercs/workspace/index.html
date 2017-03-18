@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="author" content="Paulo Henrique Eli">
+    <meta name="description" content="Atividades para aprendizagem de lógica. Dissertação de mestrado de Paulo Henrique Eli.">
+    <meta name="keywords" content="logic, logica, mestrado, ensino, saber, tic, ntic, energia, engenharia">
+    <meta name="resource-type" content="document">
+    <meta name="doc-class" content="Completed">
+    <meta name="classification" content="Internet">
+    <meta name="robots" content="ALL">
+    <meta name="rating" content="General">
+    <meta name="distribution" content="Global">
+    <meta name="revisit-after" content="1">
+    <meta name="language" content="pt-br">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="google" value="notranslate">
+
+    <title>Saber - Ambiente Livre</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <script src="../../blockly_compressed.js"></script>
+    <script src="../../blocks_compressed.js"></script>
+    <script src="../../javascript_compressed.js"></script>
+    <script src="../../python_compressed.js"></script>
+    <script src="../../php_compressed.js"></script>
+    <script src="../../lua_compressed.js"></script>
+    <script src="../../dart_compressed.js"></script>
+
+    <script src="../../../lib/filesaver.min.js"></script>
+    <script src="../../../lib/jquery/jquery-1.12.3.min.js"></script>
+    <script src="../../../lib/bootstrap/bootstrap.min.js"></script>
+    <script src="../../../lib/bootbox/bootbox.min.js"></script>
+
+    <script src="code.js"></script>
+</head>
+
+<script>
+
+    function setSolution(data) {
+        Code.loadBlocks(data);
+    }
+
+    function loadExercicio() {
+        $.get({
+            url: '../carregarExercicio.html',
+            success: function (data) {
+                bootbox.dialog({
+                    message: data,
+                    title: "Carregar exercício",
+                    buttons: {
+                        success: {
+                            label: "Carregar!",
+                            className: "btn-success",
+                            callback: function () {
+                                setLoadedSolution();
+                            }
+                        },
+                    }
+                });
+            }
+        });
+    }
+
+    function saveExercicio() {
+        var selected = Code.selected;
+        try {
+            Code.selected = 'xml';
+            Code.renderContent();
+
+            var xmlContent = document.getElementById('content_xml').value;
+            if (xmlContent !== '<xml xmlns="http://www.w3.org/1999/xhtml"></xml>') {
+                saveAs(new File([xmlContent], document.title + ".saber", {type: "text/plain;charset=utf-8"}));
+            }
+        } finally {
+            if (selected) {
+                Code.selected = selected;
+            }
+        }
+    }
+
+</script>
+
+<body>
+<table width="100%" height="100%" style="margin-top: 5px">
+    <tr style="line-height: 20px">
+        <td style="text-align:center" colspan="2">
+            <div>
+                <strong>Este é um ambiente livre, sinta-se a vontade para desenvolver e testar seus
+                    algoritimos.</strong><br/>
+                <span style="color:red;font-size:75%;">Este é o ambiente completo do Blockly. Sinta-se à vontade para desbravar como desejar a ferramenta.</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan=2>
+            <table width="100%">
+                <tr id="tabRow" height="1em">
+                    <td id="tab_blocks" class="tabon">...</td>
+                    <td class="tabmin">&nbsp;</td>
+                    <td id="tab_javascript" class="taboff">JavaScript</td>
+                    <td class="tabmin">&nbsp;</td>
+                    <td id="tab_python" class="taboff">Python</td>
+                    <td class="tabmin">&nbsp;</td>
+                    <td id="tab_php" class="taboff">PHP</td>
+                    <td class="tabmin">&nbsp;</td>
+                    <td id="tab_lua" class="taboff">Lua</td>
+                    <td class="tabmin">&nbsp;</td>
+                    <td id="tab_dart" class="taboff">Dart</td>
+                    <td class="tabmin">&nbsp;</td>
+                    <td id="tab_xml" class="taboff">XML</td>
+                    <td class="tabmax">
+                        <button class="notext" title="Salvar exercício" onclick="saveExercicio();" ;>
+                            <img src='../../media/logo_salvar.png' class="trash icon21">
+                        </button>
+                        <button class="notext" title="Carregar exercício" onclick="loadExercicio();" ;>
+                            <img src='../../media/logo_abrir.png' class="trash icon21">
+                        </button>
+                        <button class="notext" title="Ajuda"
+                                onclick="window.open('http://saber.ppgtic.ufsc.br/faq/')" ;>
+                            <img src='../../media/logo_faq.png' class="trash icon21">
+                        </button>
+                        <button id="trashButton" class="notext" title="...">
+                            <img src='../../media/1x1.gif' class="trash icon21">
+                        </button>
+                        <button id="runButton" class="notext primary" title="...">
+                            <img src='../../media/1x1.gif' class="run icon21">
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="99%" colspan=2 id="content_area">
+        </td>
+    </tr>
+</table>
+<div id="content_blocks" class="content"></div>
+<pre id="content_javascript" class="content"></pre>
+<pre id="content_python" class="content"></pre>
+<pre id="content_php" class="content"></pre>
+<pre id="content_lua" class="content"></pre>
+<pre id="content_dart" class="content"></pre>
+<textarea id="content_xml" class="content" wrap="off"></textarea>
+<xml id="toolbox" style="display: none">
+    <category id="catLogic" colour="210">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+        <block type="logic_null"></block>
+        <block type="logic_ternary"></block>
+    </category>
+    <category id="catLoops" colour="120">
+        <block type="controls_repeat_ext">
+            <value name="TIMES">
+                <shadow type="math_number">
+                    <field name="NUM">10</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="controls_whileUntil"></block>
+        <block type="controls_for">
+            <value name="FROM">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="TO">
+                <shadow type="math_number">
+                    <field name="NUM">10</field>
+                </shadow>
+            </value>
+            <value name="BY">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="controls_forEach"></block>
+        <block type="controls_flow_statements"></block>
+    </category>
+    <category id="catMath" colour="230">
+        <block type="math_number"></block>
+        <block type="math_arithmetic">
+            <value name="A">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="B">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="math_single">
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">9</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="math_trig">
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">45</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="math_constant"></block>
+        <block type="math_number_property">
+            <value name="NUMBER_TO_CHECK">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="math_change">
+            <value name="DELTA">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="math_round">
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">3.1</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="math_on_list"></block>
+        <block type="math_modulo">
+            <value name="DIVIDEND">
+                <shadow type="math_number">
+                    <field name="NUM">64</field>
+                </shadow>
+            </value>
+            <value name="DIVISOR">
+                <shadow type="math_number">
+                    <field name="NUM">10</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="math_constrain">
+            <value name="VALUE">
+                <shadow type="math_number">
+                    <field name="NUM">50</field>
+                </shadow>
+            </value>
+            <value name="LOW">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="HIGH">
+                <shadow type="math_number">
+                    <field name="NUM">100</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="math_random_int">
+            <value name="FROM">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="TO">
+                <shadow type="math_number">
+                    <field name="NUM">100</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="math_random_float"></block>
+    </category>
+    <category id="catText" colour="160">
+        <block type="text"></block>
+        <block type="text_join"></block>
+        <block type="text_append">
+            <value name="TEXT">
+                <shadow type="text"></shadow>
+            </value>
+        </block>
+        <block type="text_length">
+            <value name="VALUE">
+                <shadow type="text">
+                    <field name="TEXT">abc</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="text_isEmpty">
+            <value name="VALUE">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>
+            </value>
+        </block>
+        <block type="text_indexOf">
+            <value name="VALUE">
+                <block type="variables_get">
+                    <field name="VAR">text</field>
+                </block>
+            </value>
+            <value name="FIND">
+                <shadow type="text">
+                    <field name="TEXT">abc</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="text_charAt">
+            <value name="VALUE">
+                <block type="variables_get">
+                    <field name="VAR">text</field>
+                </block>
+            </value>
+        </block>
+        <block type="text_getSubstring">
+            <value name="STRING">
+                <block type="variables_get">
+                    <field name="VAR">text</field>
+                </block>
+            </value>
+        </block>
+        <block type="text_changeCase">
+            <value name="TEXT">
+                <shadow type="text">
+                    <field name="TEXT">abc</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="text_trim">
+            <value name="TEXT">
+                <shadow type="text">
+                    <field name="TEXT">abc</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="text_print">
+            <value name="TEXT">
+                <shadow type="text">
+                    <field name="TEXT">abc</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="text_prompt_ext">
+            <value name="TEXT">
+                <shadow type="text">
+                    <field name="TEXT">abc</field>
+                </shadow>
+            </value>
+        </block>
+    </category>
+    <category id="catLists" colour="260">
+        <block type="lists_create_with">
+            <mutation items="0"></mutation>
+        </block>
+        <block type="lists_create_with"></block>
+        <block type="lists_repeat">
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">5</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="lists_length"></block>
+        <block type="lists_isEmpty"></block>
+        <block type="lists_indexOf">
+            <value name="VALUE">
+                <block type="variables_get">
+                    <field name="VAR">list</field>
+                </block>
+            </value>
+        </block>
+        <block type="lists_getIndex">
+            <value name="VALUE">
+                <block type="variables_get">
+                    <field name="VAR">list</field>
+                </block>
+            </value>
+        </block>
+        <block type="lists_setIndex">
+            <value name="LIST">
+                <block type="variables_get">
+                    <field name="VAR">list</field>
+                </block>
+            </value>
+        </block>
+        <block type="lists_getSublist">
+            <value name="LIST">
+                <block type="variables_get">
+                    <field name="VAR">list</field>
+                </block>
+            </value>
+        </block>
+        <block type="lists_split">
+            <value name="DELIM">
+                <shadow type="text">
+                    <field name="TEXT">,</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="lists_sort"></block>
+    </category>
+    <category id="catColour" colour="20">
+        <block type="colour_picker"></block>
+        <block type="colour_random"></block>
+        <block type="colour_rgb">
+            <value name="RED">
+                <shadow type="math_number">
+                    <field name="NUM">100</field>
+                </shadow>
+            </value>
+            <value name="GREEN">
+                <shadow type="math_number">
+                    <field name="NUM">50</field>
+                </shadow>
+            </value>
+            <value name="BLUE">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="colour_blend">
+            <value name="COLOUR1">
+                <shadow type="colour_picker">
+                    <field name="COLOUR">#ff0000</field>
+                </shadow>
+            </value>
+            <value name="COLOUR2">
+                <shadow type="colour_picker">
+                    <field name="COLOUR">#3333ff</field>
+                </shadow>
+            </value>
+            <value name="RATIO">
+                <shadow type="math_number">
+                    <field name="NUM">0.5</field>
+                </shadow>
+            </value>
+        </block>
+    </category>
+    <sep></sep>
+    <category id="catVariables" colour="330" custom="VARIABLE"></category>
+    <category id="catFunctions" colour="290" custom="PROCEDURE"></category>
+</xml>
+</body>
+
+<script>
+    /*
+        Inserir código de rastreamento do Google aqui
+        Cada página possui este local, para que seja possível rastrear a quantidade de acessos para cada uma das atividades
+    */
+</script>
+
+</html>

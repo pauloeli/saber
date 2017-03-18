@@ -1,0 +1,134 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="?`vVHaH~res|]E@};IlZ" x="313" y="163">
+    <field name="VAR">idade</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="I?4-J%Eh7;83)_0o,U6F">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <shadow type="text" id="!9yUCwg?lmo@Fmq[JT7=">
+            <field name="TEXT">Digite sua idade:</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="7`h;MA=Uclz:oyckOHkR">
+        <field name="VAR">sexo</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="vA}tri-=sT%_Ov-+(:7Q">
+            <mutation type="TEXT"></mutation>
+            <field name="TYPE">TEXT</field>
+            <value name="TEXT">
+              <shadow type="text" id="A!ngIgX//x[r]x@u;k!(">
+                <field name="TEXT">Digite seu sexo ("M" para masculino e "F" para feminino:)</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="2UCRa|K(?ec?k3%Eae+i">
+            <mutation elseif="1" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_operation" id="1QKk#/-Jrs4tFBw|J%6g">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="logic_compare" id="W9C%Dq@4*9nHtMU#fy}o">
+                    <field name="OP">GTE</field>
+                    <value name="A">
+                      <block type="variables_get" id="l_j0(8c@FF`yqB#uO_ME">
+                        <field name="VAR">idade</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="pYE~udczNa)bDIDkOF@2">
+                        <field name="NUM">18</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="#[`Gj_,Rj;66Fs8NNHs:">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="YBKicTwm6I2*eWae;GW0">
+                        <field name="VAR">sexo</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id=".:;/`yLl__[,zKDS6)QO">
+                        <field name="TEXT">M</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="text_print" id="IhB=%H8`{jb#AxzIJ#nu">
+                <value name="TEXT">
+                  <shadow type="text" id="`fKXkV,]s~PL][+bJhB=">
+                    <field name="TEXT">Você possui 18 anos ou mais, e é do sexo masculino.</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_operation" id="L}hhCS!aBA8ejB4,qb^4">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="logic_compare" id="eqh!T`b2=K~Ck~Psve]b">
+                    <field name="OP">GTE</field>
+                    <value name="A">
+                      <block type="variables_get" id="heF,iHGSQi.)!S;UCKb@">
+                        <field name="VAR">idade</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="qiAEX)|D{cS2jG/.iH+2">
+                        <field name="NUM">18</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="1h*|k(}o}IJhN).,d@@-">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="ia1dU(;=qVIf|vVZmWCQ">
+                        <field name="VAR">sexo</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="Am()}kFNWOkAI*TC`tiE">
+                        <field name="TEXT">F</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="text_print" id="dP+w6[|lb}L_`vS2+D?a">
+                <value name="TEXT">
+                  <shadow type="text" id="s0_D}4n,AdT/JpU;s]pk">
+                    <field name="TEXT">Você possui 18 anos ou mais, e é do sexo feminino.</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="text_print" id=")}XDh?+UdYYrE(J#*co[">
+                <value name="TEXT">
+                  <shadow type="text" id="=*P,3CFUOMHL!Su[Ci7}">
+                    <field name="TEXT">Você não possui 18 anos ou os valores informados são inválidos para o algoritimo</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="author" content="Paulo Henrique Eli">
+    <meta name="description" content="Atividades para aprendizagem de lógica. Dissertação de mestrado de Paulo Henrique Eli.">
+    <meta name="keywords" content="logic, logica, mestrado, ensino, saber, tic, ntic, energia, engenharia">
+    <meta name="resource-type" content="document">
+    <meta name="doc-class" content="Completed">
+    <meta name="classification" content="Internet">
+    <meta name="robots" content="ALL">
+    <meta name="rating" content="General">
+    <meta name="distribution" content="Global">
+    <meta name="revisit-after" content="1">
+    <meta name="language" content="pt-br">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+
+    <title>Exercício 4</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <script src="../../blockly_compressed.js"></script>
+    <script src="../../blocks_compressed.js"></script>
+    <script src="../../javascript_compressed.js"></script>
+
+    <script src="../../../lib/filesaver.min.js"></script>
+    <script src="../../../lib/jquery/jquery-1.12.3.min.js"></script>
+    <script src="../../../lib/bootstrap/bootstrap.min.js"></script>
+    <script src="../../../lib/bootbox/bootbox.min.js"></script>
+
+    <script src="code.js"></script>
+</head>
+
+<script>
+
+    function setSolution(data){
+        Code.loadBlocks(data);
+    }
+
+    function loadExercicio(){
+        $.get({
+            url: '../carregarExercicio.html',
+            success: function(data) {
+                bootbox.dialog({
+                    message: data,
+                    title: "Carregar exercício",
+                    buttons: {
+                        success: {
+                            label: "Carregar!",
+                            className: "btn-success",
+                            callback: function() {
+                                setLoadedSolution();
+                            }
+                        },
+                    }
+                });
+            }
+        });
+    }
+
+    function saveExercicio(){
+        var selected = Code.selected;
+        try {
+            Code.selected = 'xml';
+            Code.renderContent();
+
+            var xmlContent = document.getElementById('content_xml').value;
+            if (xmlContent !== '<xml xmlns="http://www.w3.org/1999/xhtml"></xml>'){
+                saveAs(new File([xmlContent], document.title + ".saber", {type: "text/plain;charset=utf-8"}));
+            }
+        } finally {
+            if (selected){
+                Code.selected = selected;
+            }
+        }
+    }
+
+</script>
+
+<body>
+<table width="100%" height="100%" style="margin-top:5px">
+    <tr style="line-height: 20px">
+        <td style="text-align:center" colspan="2">
+            <div>
+                <strong>Escreva um programa que recebe três números reais do usuário e calcula a soma dos números
+                    negativos</strong><br/>
+                <span style="color:red;font-size:75%;">Caso você esteja com dificuldades para resolver o exercício, sinta-se à vontade para acessar o vídeo com a resolução. Basta clicar no botão ao lado.</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan=2>
+            <table width="100%">
+                <tr id="tabRow" height="1em">
+                    <td id="tab_blocks" class="tabon">...</td>
+                    <td class="tabmin">&nbsp;</td>
+                    <td id="tab_javascript" class="taboff">JavaScript</td>
+                    <td class="tabmin">&nbsp;</td>
+                    <td id="tab_xml" class="taboff">XML</td>
+                    <td class="tabmax">
+                        <button class="notext" title="Salvar exercício" onclick="saveExercicio();" ;>
+                            <img src='../../media/logo_salvar.png' class="trash icon21">
+                        </button>
+                        <button class="notext" title="Carregar exercício" onclick="loadExercicio();" ;>
+                            <img src='../../media/logo_abrir.png' class="trash icon21">
+                        </button>
+                        <button class="notext" title="Ajuda"
+                                onclick="window.open('http://saber.ppgtic.ufsc.br/faq/')" ;>
+                            <img src='../../media/logo_faq.png' class="trash icon21">
+                        </button>
+                        <button class="notext" title="Assistir o vídeo de ajuda no Youtube"
+                                onclick="window.open('https://www.youtube.com/watch?v=1x87tZW2OOs')" ;>
+                            <img src='../../media/logo_youtube.png' class="trash icon21">
+                        </button>
+                        <button id="trashButton" class="notext" title="...">
+                            <img src='../../media/1x1.gif' class="trash icon21">
+                        </button>
+                        <button id="runButton" class="notext primary" title="...">
+                            <img src='../../media/1x1.gif' class="run icon21">
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="99%" colspan=2 id="content_area">
+        </td>
+    </tr>
+</table>
+<div id="content_blocks" class="content"></div>
+<pre id="content_javascript" class="content"></pre>
+<textarea id="content_xml" class="content" wrap="off"></textarea>
+<xml id="toolbox" style="display: none">
+    <category id="catLogic" colour="210">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+    </category>
+    <category id="catMath" colour="230">
+        <block type="math_number"></block>
+        <block type="math_arithmetic">
+            <value name="A">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="B">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
+    </category>
+    <category id="catText" colour="160">
+        <block type="text"></block>
+        <block type="text_print">
+            <value name="TEXT">
+                <shadow type="text">
+                    <field name="TEXT">abc</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="text_prompt_ext">
+            <value name="TEXT">
+                <shadow type="text">
+                    <field name="TEXT">abc</field>
+                </shadow>
+            </value>
+        </block>
+    </category>
+    <sep></sep>
+    <category id="catVariables" colour="330" custom="VARIABLE"></category>
+</xml>
+</body>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-77900223-1', 'auto');
+    ga('send', 'pageview', 'exercicio_4');
+</script>
+
+</html>

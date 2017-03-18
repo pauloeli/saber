@@ -1,0 +1,151 @@
+﻿<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="VP`G:aPVXI])aOVGXWjP" x="-1212" y="-937">
+    <field name="VAR">numMes</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="^*oWj]y?137*n(IbUb:j">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <shadow type="text" id="8MKR_V@*6[~!w)^l*,6k">
+            <field name="TEXT">Mês:</field>
+          </shadow>
+          <block type="text" id="gSZD/5bbxQ14c~meLKcN">
+            <field name="TEXT">Mês:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="Mg^tVWZiqYFe;CPyN}GQ">
+        <mutation elseif="1" else="1"></mutation>
+        <comment pinned="false" h="80" w="160">Primeiro é criada a regra para os meses com 30 dias.</comment>
+        <value name="IF0">
+          <block type="logic_operation" id="J`BuUBcKgnN)!O3U[*?n" collapsed="true">
+            <field name="OP">OR</field>
+            <value name="A">
+              <block type="logic_operation" id="Y}Ah(0oO~R!_=h1QDL]n">
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="logic_operation" id="mOz37GUjJiawq(T_!jZz">
+                    <field name="OP">OR</field>
+                    <value name="A">
+                      <block type="logic_compare" id="PTtq#A^v;stX.chaGDwt">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="variables_get" id="zbjjP4]MCntyVz#v%;}+">
+                            <field name="VAR">numMes</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="jhwZ~k,RXaPz(gy3gr]0">
+                            <field name="NUM">6</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_compare" id="I=HnXH,csAQ+.lb?lKUK">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="variables_get" id="f2gkBZlw{p9T#IG]fOmg">
+                            <field name="VAR">numMes</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id=",ZI/yL3y127/iltAd*;M">
+                            <field name="NUM">4</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="1fW5Rj[taB{bS*PM8|P6">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="h[M7;HF7#I{{lIYGovd5">
+                        <field name="VAR">numMes</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="^tNY)5KWs:|,/Qjy=fCF">
+                        <field name="NUM">9</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id="@/?p5BStknL{3P0w~arK">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="`}w#35#i1bnxu+M{}i_O">
+                    <field name="VAR">numMes</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="upUkV`^8#H?.,k(70@Ch">
+                    <field name="NUM">11</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="tP{6T`eevs6#:S~xbU#D">
+            <value name="TEXT">
+              <shadow type="text" id="(@#:-^}pK@/?j(eGpUe~">
+                <field name="TEXT"></field>
+              </shadow>
+              <block type="text" id="Qq(#R3G-O|HNEmie6S9u">
+                <field name="TEXT">Terá 30 dias.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="]aD@YY8GMrNJqQWUz-xg">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="LR!:ik15h[W!opnYfL^Z">
+                <field name="VAR">numMes</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="pjy2Aqex0w:E{%Y|w@0/">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="text_print" id="aWuP(ST{qQo8|k0Y3|(I">
+            <value name="TEXT">
+              <shadow type="text" id="XojO1[GA4{spb*BJVtjf">
+                <field name="TEXT"></field>
+              </shadow>
+              <block type="text" id=",]0IER{8LP.*#^@gM!Ky">
+                <field name="TEXT">Terá 29 dias.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="text_print" id="jT9kB)7)3{:Y!4YfLvfr">
+            <value name="TEXT">
+              <shadow type="text" id="^0a;rd4RzfsHs/u8GLR2">
+                <field name="TEXT"></field>
+              </shadow>
+              <block type="text" id="a6b3:#Lnd|{{N1rY^3~Q">
+                <field name="TEXT">Terá 31 dias.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,54 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="?`vVHaH~res|]E@};IlZ" x="313" y="163">
+    <field name="VAR">idade</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="I?4-J%Eh7;83)_0o,U6F">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <shadow type="text" id="!9yUCwg?lmo@Fmq[JT7=">
+            <field name="TEXT">Digite sua idade:</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="2UCRa|K(?ec?k3%Eae+i">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="W9C%Dq@4*9nHtMU#fy}o">
+            <field name="OP">GTE</field>
+            <value name="A">
+              <block type="variables_get" id="l_j0(8c@FF`yqB#uO_ME">
+                <field name="VAR">idade</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="pYE~udczNa)bDIDkOF@2">
+                <field name="NUM">18</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="IhB=%H8`{jb#AxzIJ#nu">
+            <value name="TEXT">
+              <shadow type="text" id="`fKXkV,]s~PL][+bJhB=">
+                <field name="TEXT">Você possui 18 anos ou mais.</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="text_print" id=")}XDh?+UdYYrE(J#*co[">
+            <value name="TEXT">
+              <shadow type="text" id="=*P,3CFUOMHL!Su[Ci7}">
+                <field name="TEXT">Você possui menos de 18 anos.</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

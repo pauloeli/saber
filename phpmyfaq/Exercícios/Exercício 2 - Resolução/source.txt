@@ -1,0 +1,2 @@
+<p style="text-align: justify;">Segue o código para download da resolução do exercício.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="http://saber.ppgtic.ufsc.br/faq/images/res_ex_2.png" width="613" height="467" /></p>
