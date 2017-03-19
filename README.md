@@ -39,7 +39,7 @@ A licença das imagens pode ser observada nos seguintes links:
 * [Imagem 6](https://pixabay.com/pt/qualidade-gancho-marca-de-sele%C3%A7%C3%A3o-787663/)
 * [Imagem 7](https://pixabay.com/pt/etapas-escadas-at%C3%A9-escada-388914/)
 
-### phpMyFaq
+### FAQ
 
 A plataforma de dúvidas e ajuda foi desenvolvido na ferramenta [phpMyFaq](http://www.phpmyfaq.de) de autoria de Thorsten Rinne e comunidade. Buscando simplificar a implantação do projeto e garantindo a sua capacidade adaptativa, esta publicação não contemplará os arquivos de instalação da ferramenta. Caso seja de interesse, informações acerca de como realizar a instalação pode ser encontradas [neste endereço](http://www.phpmyfaq.de/documentation).
 
