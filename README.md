@@ -4,6 +4,10 @@
     <img src="css/images/logo.png" alt="Projeto Saber"/>
 </p>
 
+<p align="center">   
+    <img src="https://badgen.net/badge/license/MIT/blue" alt="MIT License"/>
+</p>
+
 Este projeto é parte integrante da proposta de mestrado do aluno [Paulo Henrique Eli](http://lattes.cnpq.br/9175378911774164), orientado pelas professoras Dra. [Olga Yevseyeva](http://lattes.cnpq.br/8339563650267766) e Dra. [Luciana Bolan Frigo](http://lattes.cnpq.br/6348215204947696) da Universidade Federal de Santa Catarina (UFSC), Campus Araranguá.
 
 O projeto foi desenvolvido de forma a dispensar conhecimentos técnicos avançados quanto ao desenvolvimento de aplicações web. Tal característica pode ser observada na organização das pastas e metodologias relacionadas a codificação das partes.
